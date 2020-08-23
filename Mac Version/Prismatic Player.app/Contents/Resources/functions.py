@@ -68,9 +68,7 @@ class song:
         animationLoadingJpg = np.load('photos/LoadingScreen/LoadingScreen_400.npy', allow_pickle=True)
       else:
         animationLoadingJpg = np.load('photos/LoadingScreen/LoadingScreen_200.npy', allow_pickle=True)
-      # image = Image.open(filename)
-        # image = image.resize((int(200 * scale), int(200 * scale)), Image.ANTIALIAS)
-      # img = ImageTk.PhotoImage(image)
+      
       img = tk.PhotoImage(data = animationLoadingJpg[0])
       return img
   def getRgb(this):
@@ -80,12 +78,7 @@ class song:
       image = Image.open(BytesIO(img_data))
       colorsMain = {}
       colorsSecondary = {}
-      # for x in range(8):
-      #   currentColor = Image.open(BytesIO(img_data)).getpixel((8*x,4))
-      #   if(currentColor in colorsMain):
-      #     colorsMain[currentColor] += 1
-      #   else:
-      #     colorsMain[currentColor] = 1
+
       for x in range(8):
         currentColor1 = Image.open(BytesIO(img_data)).getpixel((8 * x,4))
         if(currentColor1 in colorsMain):
@@ -93,7 +86,6 @@ class song:
         else:
           colorsMain[currentColor1] = 1
         for y in range(8):
-          # currentColor = Image.open(BytesIO(img_data)).getpixel((16*x,16*y-1))
           currentColor = Image.open(BytesIO(img_data)).getpixel((28 + x,28 + y))
           if(currentColor in colorsSecondary):
             colorsSecondary[currentColor] += 1
@@ -101,16 +93,9 @@ class song:
             colorsSecondary[currentColor] = 1
       sort_colors =  sorted(colorsSecondary.items(), key=lambda x: x[1], reverse=True)
       try:
-        # dominantColor = max(colorsMain.items(), key=operator.itemgetter(1))[0]
-        # secondaryColor = max(colorsSecondary, key=lambda x: x[1])
-        # thirdColor = max(colorsSecondary, key=lambda x: x[2])
-        
         dominantColor = max(colorsMain.items(), key=operator.itemgetter(1))[0]
         secondaryColor = sort_colors[1][0]
         thirdColor = sort_colors[2][0]
-        # print(sort_colors[1][0])
-        # print(sort_colors)
-        # print(secondaryColor)
         i=2
         if((dominantColor[0] - 75 <= secondaryColor[0] <= dominantColor[0] + 75) and
            (dominantColor[1] - 75 <= secondaryColor[1] <= dominantColor[1] + 75) and
@@ -120,7 +105,6 @@ class song:
             secondaryColor = (0,0,0)
           else:
             secondaryColor = (255,255,255)
-        
         if((dominantColor[0] - 50 <= thirdColor[0] <= dominantColor[0] + 50) and
            (dominantColor[1] - 50 <= thirdColor[1] <= dominantColor[1] + 50) and
            (dominantColor[2] - 50 <= thirdColor[2] <= dominantColor[2] + 50)):
@@ -260,13 +244,9 @@ def seekPlayback(spotify, percent):
   newTime = int(spotify.currently_playing().get('item')['duration_ms'] * percent)
   playback = spotify.seek_track(newTime)
 def skipPlayback(spotify):
-
-
+  
   playback = spotify.next_track()
 def previousPlayback(spotify):
-
-
-
 
   playback = spotify.previous_track()
 def togglePlayback(spotify):

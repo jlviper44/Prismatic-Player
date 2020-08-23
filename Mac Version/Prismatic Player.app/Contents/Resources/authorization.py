@@ -9,20 +9,12 @@ import time
 from PIL import ImageTk, Image, ImageStat, ImageFilter
 import webbrowser
 
-
-
-# circle animation
-# create adverttisement window
-# play now screen
-# splice if title is too long
-
-
 class auth:
   def __init__(this):
     this.window = tk.Tk()
-    # this.window.minsize(600, 400)
     this.window.title("Prismatic Player Setup")
     this.window.config(bg = '#0f0f0f')
+
     this.introduction = tk.Canvas(this.window, bg = '#0f0f0f', bd=0, highlightthickness=0, width = 500, height = 275)
     this.introduction.grid(row = 0, column = 0, columnspan = 2)
     image = Image.open("photos/spotify.png")
@@ -33,12 +25,6 @@ class auth:
     this.introduction.create_text((250,165), text='Prismatic Player', fill= "white", font=("Circular", 30))
     this.introduction.create_text((250,195), text='By: Justin Lee', fill= "white", font=("Circular", 15))
     this.introduction.create_text((250,235), text='To begin the setup, please enter your username', fill= "white", font=("Circular", 15))
-    # this.spotifyImage = this.introduction.create_image()
-    # 
-    # this.spotifyImage = tk.Label(this.window, image=img, bd=0, highlightthickness=0, bg = '#0f0f0f').grid(row = 0, column = 1)
-    # this.spotifyImage = img
-
-    # helpButton = tk.Button(this.window, text = "Help", command = this.help).grid(row=0)
     this.privacyButton = tk.Button(this.window, text = "Privacy Policy", width = 10, font=("Circular", 16), relief = 'flat', command = this.privacyPolicyLaunch, borderwidth=0, highlightthickness = 0, bd = 0)
     this.privacyButton.grid(row = 0, column = 1, sticky = 'ne', padx = (10,10), pady = (10,10))
 
@@ -62,8 +48,6 @@ class auth:
     this.submitButton.grid(row = 3, columnspan = 2, pady=(15,15))
     this.window.bind('<Button-1>', this.removeScroll)
     
-    
-
     if (os.path.exists('authData.csv')):
       with open('authData.csv', newline='') as csvfile:
         reader =  csv.DictReader(csvfile)
@@ -75,17 +59,6 @@ class auth:
         except:
           pass
     
-
-
-
-    # this.usernameEntry     
-    # this.client_idEntry    
-    # this.client_secretEntry
-    # this.redirect_urlEnrty 
-    # this.callback_urlEntry 
-
-
-
     this.code = ""
     this.initialRun = True
     this.authDataCreated = False
@@ -185,8 +158,6 @@ class auth:
     this.privacyPolicyCanvas.itemconfigure(this.container, height = 3275)
     this.privacyPolicyCanvas.update_idletasks()
 
-
-    
     tk.Label(this.frame, text= '  ', justify = 'center', bg = '#0f0f0f', fg = 'white', font=("Circular", 16)).pack()
     tk.Label(this.frame, text= 'Welcome to the Advanced Setup!', justify = 'center', bg = '#0f0f0f', fg = '#1ed761', font=("Circular", 30)).pack()
     tk.Label(this.frame, text= ' Follow these steps to create your own Spotify server! ', justify = 'center', bg = '#0f0f0f', fg = 'white', font=("Circular", 16)).pack()
@@ -195,6 +166,7 @@ class auth:
     link = tk.Label(this.frame, text= ' https://developer.spotify.com/dashboard/login ', justify = 'center', bg = '#0f0f0f', fg = '#1ed761', font=("Circular", 16))
     link.pack()
     link.bind("<Button-1>", lambda e: webbrowser.open_new("https://developer.spotify.com/dashboard/login"))
+
     tk.Label(this.frame, text= '  ', justify = 'center', bg = '#0f0f0f', fg = 'white', font=("Circular", 16)).pack()
     
     image = Image.open("photos/"+str(1)+".png")
@@ -223,7 +195,6 @@ class auth:
     tk.Label(this.frame, text= ' 4. Name the App Prismatic Player, fill in any description, ', justify = 'center', bg = '#0f0f0f', fg = 'white', font=("Circular", 16)).pack()
     tk.Label(this.frame, text= ' and click the two checkboxes. ', justify = 'center', bg = '#0f0f0f', fg = 'white', font=("Circular", 16)).pack()
     tk.Label(this.frame, text= '  ', justify = 'center', bg = '#0f0f0f', fg = 'white', font=("Circular", 16)).pack()
-
 
     image = Image.open("photos/"+str(3)+".png")
     image = image.resize((450, 250), Image.ANTIALIAS)
@@ -279,7 +250,6 @@ class auth:
     img1.pack()
     img1.image = newImg
 
-    
     tk.Label(this.frame, text= '  ', justify = 'center', bg = '#0f0f0f', fg = 'white', font=("Circular", 16)).pack()
     tk.Label(this.frame, text= ' 7. Congratulations! You now have created your own Spotify ', justify = 'center', bg = '#0f0f0f', fg = 'white', font=("Circular", 16)).pack()
     tk.Label(this.frame, text= ' App Server! Click Submit in the Prismatic Player Setup ', justify = 'center', bg = '#0f0f0f', fg = 'white', font=("Circular", 16)).pack()
@@ -289,12 +259,9 @@ class auth:
     this.privacyPolicyCanvas.configure(scrollregion=this.privacyPolicyCanvas.bbox('all'), yscrollcommand=this.scroll_y.set)
     this.privacyPolicyCanvas.yview_scroll(10, "units")
 
-
-
-
-
     this.advancedSetupCanvas = tk.Canvas(this.window, bg = '#0f0f0f', bd=0, highlightthickness=0, width = 500, height = 300)
     this.advancedSetupCanvas.grid(row = 2, column = 0, columnspan = 2)
+    
     this.client_idText      = tk.Label(this.advancedSetupCanvas, text="Client Id:", bg = '#0f0f0f', fg = '#1ed761', font=("Circular", 16)).grid(row=2, pady=(5,5))
     this.client_idEntry     = tk.Entry(this.advancedSetupCanvas, insertbackground = '#1ed761', width = 30, bg = '#0f0f0f', fg = 'white', font=("Circular", 16), highlightcolor = '#1ed761', relief='flat', textvariable = this.client_id).grid(row=2, column=1, pady=(5,5))
     
@@ -384,7 +351,6 @@ class auth:
         this.window.destroy()
         token = util.prompt_for_user_token(username,scope,client_id=client_id,client_secret=client_secret,redirect_uri=redirect_url)
         spotify = spotipy.Spotify(auth=token)
-        
         return spotify
       elif(this.code == ""):
         try:
@@ -401,7 +367,6 @@ class auth:
           token = this.sp_oauth.get_access_token(this.code, as_dict=False)
           messagebox.showinfo(title=None, message='Succesfully Authenticated!')
           this.window.destroy()
-
         except:
           os.remove('authData.csv')
           messagebox.showwarning(title="ColorFlow", message="Did not receive correct data.\nPlease try again.")
@@ -416,7 +381,6 @@ class auth:
     string = this.redirect_url.get() + "/?code="
     this.code = code.replace(string,"")
     this.getToken()
-
 def clearCache():
   with open('authData.csv', newline='') as csvfile:
     reader =  csv.DictReader(csvfile)

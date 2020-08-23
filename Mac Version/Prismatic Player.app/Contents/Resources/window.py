@@ -23,7 +23,6 @@ class create:
     except:
       exit()
     if(currentSong == None):
-      # print("No Song Playing")
       this.isPlaying = False
     else:
       this.isPlaying = True
@@ -33,16 +32,10 @@ class create:
 
     this.window.wm_attributes('-fullscreen','true') 
     this.window.title("Prismatic Player")
+
     this.screen_width = this.window.winfo_screenwidth()
     this.screen_height = this.window.winfo_screenheight()
-    # this.screen_width = 1440
-    # this.screen_height = 900
-    # this.screen_width = 800
-    # this.screen_height = 1340      
-    # this.screen_width = 500
-    # this.screen_height = 800
     this.window.minsize(this.screen_width, this.screen_height)
-    # print(screen_width,screen_height)
     this.orientation = ""
     if(this.screen_width >= this.screen_height):
       this.orientation = "horizontal"
@@ -92,6 +85,7 @@ class create:
       
       this.playbackName = this.canvasTitle.create_text((int(25 * this.scale),int(50 * this.scale)),fill=this.rgbSecond,font=("Circular", int(40 * this.scale)), text=this.songData.getPlaybackSource(this.orientation)[0], anchor='w', tags = 'playbackName')
       this.playbackArtist = this.canvasTitle.create_text((int(25 * this.scale),int(100 * this.scale)),fill=this.rgbThird,font=("Circular", int(20 * this.scale)), text=this.songData.getPlaybackSource(this.orientation)[1], anchor='w')
+      
       this.canvasTitle.tag_bind('playbackName','<Button-1>',this.playlistNameClick)
       this.canvasTitle.tag_bind('playbackName','<Enter>',lambda event, a='playbackName': this.mouseEnter(a))
       this.canvasTitle.tag_bind('playbackName','<Leave>',lambda event, a='playbackName': this.mouseLeave(a))
@@ -147,8 +141,6 @@ class create:
 
       leftUnderlayArc  = this.canvasArtworkWrapper.create_arc(width - 32*this.scale - 97*this.scale, height + 32*this.scale, width + 32*this.scale - 97*this.scale, height - 32*this.scale,start=90 , extent=180, style='chord', width = 5*this.scale, outline=this.rgbSecond, fill=this.rgbSecond, tags='arcUnderlay')    
       rightUnderlayArc = this.canvasArtworkWrapper.create_arc(width - 32*this.scale + 97*this.scale, height + 32*this.scale, width + 32*this.scale + 97*this.scale, height - 32*this.scale,start=270, extent=180, style='chord', width = 5*this.scale, outline=this.rgbSecond, fill=this.rgbSecond, tags='arcUnderlay')
-      # bottomUnderlayLine = this.canvasArtworkWrapper.create_line(width - 97*this.scale, height + 32*this.scale, width + 97*this.scale, height + 32*this.scale, fill=this.rgbThird, width = 5*this.scale, tags='buttonUnderlay')
-      # upperUnderlayLine  = this.canvasArtworkWrapper.create_line(width - 97*this.scale, height - 32*this.scale, width + 97*this.scale, height - 32*this.scale, fill=this.rgbThird, width = 5*this.scale, tags='buttonUnderlay')
       middleUnderlay = this.canvasArtworkWrapper.create_rectangle(width - 97*this.scale, height + 32*this.scale,width + 97*this.scale, height - 32*this.scale,fill=this.rgbSecond, outline=this.rgbSecond,width = 5*this.scale, tags='buttonUnderlay')
 
       pause = [width + 30*this.scale,height+30*this.scale,width - 30*this.scale,height+30*this.scale,width - 30*this.scale,height-30*this.scale,width + 30*this.scale,height-30*this.scale]
@@ -158,11 +150,11 @@ class create:
       this.canvasArtworkWrapper.tag_bind("pauseButton", "<Button-1>",this.pauseButtonClick)
       this.canvasArtworkWrapper.tag_bind("pauseButtonOutline", "<Button-1>",this.pauseButtonClick)
 
-      this.backButton = this.canvasArtworkWrapper.create_polygon(back, fill=this.rgbThird, outline=this.rgbThird, width=10*this.scale, tags="backButton")
+      this.backButton = this.canvasArtworkWrapper.create_polygon(back, fill=this.rgbSecond, outline=this.rgbSecond, width=10*this.scale, tags="backButton")
       this.canvasArtworkWrapper.tag_bind("backButton", "<Button-1>",this.backButtonClick)
       this.canvasArtworkWrapper.tag_bind('backButton','<Enter>',lambda event, a='backButton': this.mouseEnter(a))
       this.canvasArtworkWrapper.tag_bind('backButton','<Leave>',lambda event, a='backButton': this.mouseLeave(a))
-      this.skipButton = this.canvasArtworkWrapper.create_polygon(skip, fill=this.rgbThird, outline=this.rgbThird, width=10*this.scale, tags="skipButton")
+      this.skipButton = this.canvasArtworkWrapper.create_polygon(skip, fill=this.rgbSecond, outline=this.rgbSecond, width=10*this.scale, tags="skipButton")
       this.canvasArtworkWrapper.tag_bind("skipButton", "<Button-1>",this.skipButtonClick)
       this.canvasArtworkWrapper.tag_bind('skipButton','<Enter>',lambda event, a='skipButton': this.mouseEnter(a))
       this.canvasArtworkWrapper.tag_bind('skipButton','<Leave>',lambda event, a='skipButton': this.mouseLeave(a))
@@ -190,8 +182,6 @@ class create:
 
       leftUnderlayArc  = this.canvasArtworkWrapper.create_arc(width - 32*this.scale - 97*this.scale, height + 32*this.scale, width + 32*this.scale - 97*this.scale, height - 32*this.scale,start=90 , extent=180, style='chord', width = 5*this.scale, outline=this.rgbSecond, fill=this.rgbSecond, tags='arcUnderlay')    
       rightUnderlayArc = this.canvasArtworkWrapper.create_arc(width - 32*this.scale + 97*this.scale, height + 32*this.scale, width + 32*this.scale + 97*this.scale, height - 32*this.scale,start=270, extent=180, style='chord', width = 5*this.scale, outline=this.rgbSecond, fill=this.rgbSecond, tags='arcUnderlay')
-      # bottomUnderlayLine = this.canvasArtworkWrapper.create_line(width - 97*this.scale, height + 32*this.scale, width + 97*this.scale, height + 32*this.scale, fill=this.rgbThird, width = 5*this.scale, tags='buttonUnderlay')
-      # upperUnderlayLine  = this.canvasArtworkWrapper.create_line(width - 97*this.scale, height - 32*this.scale, width + 97*this.scale, height - 32*this.scale, fill=this.rgbThird, width = 5*this.scale, tags='buttonUnderlay')
       middleUnderlay = this.canvasArtworkWrapper.create_rectangle(width - 97*this.scale, height + 32*this.scale,width + 97*this.scale, height - 32*this.scale,fill=this.rgbSecond, outline=this.rgbSecond,width = 5*this.scale, tags='buttonUnderlay')
 
       pause = [width + 30*this.scale,height+30*this.scale,width - 30*this.scale,height+30*this.scale,width - 30*this.scale,height-30*this.scale,width + 30*this.scale,height-30*this.scale]
@@ -322,11 +312,10 @@ class create:
     elif(object == 'time'):
       this.time.config(fg=this.rgbSecond)
     elif(object == 'backButton'):
-      this.canvasArtworkWrapper.itemconfig("backButton", fill=this.rgbThird, outline=this.rgbThird)
+      this.canvasArtworkWrapper.itemconfig("backButton", fill=this.rgbSecond, outline=this.rgbSecond)
     elif(object == 'skipButton'):
-      this.canvasArtworkWrapper.itemconfig("skipButton", fill=this.rgbThird, outline=this.rgbThird)
+      this.canvasArtworkWrapper.itemconfig("skipButton", fill=this.rgbSecond, outline=this.rgbSecond)
   def loadAnimation(this):
-    # int(600 * this.scale)
     if(int(600 * this.scale) >= 1000):
       this.animationAdJpg = np.load('photos/Ad/Ad_1000.npy', allow_pickle=True)
       this.animationLoadingJpg = np.load('photos/LoadingScreen/LoadingScreen_1000.npy', allow_pickle=True)
@@ -411,31 +400,6 @@ class create:
             x.dump('photos/PlaylistInfo.npy')
         except:
           pass
-        # else:
-        #   response = requests.get(playlist['images'][0]['url'])
-        #   img_data = response.content
-        #   img = Image.open(BytesIO(img_data), mode = 'r')
-        #   img = img.resize((80, 80), Image.ANTIALIAS)
-        #   imgByteArr = io.BytesIO()
-        #   img.save(imgByteArr, format='GIF')
-
-    # this.playlistInfo = []
-    # user = this.spotify.me().get('id')
-    # for playlist in this.spotify.user_playlists(user).get('items'):
-    #   response = requests.get(playlist['images'][0]['url'])
-    #   img_data = response.content
-    #   image = Image.open(BytesIO(img_data))
-    #   image = image.resize((80, 80), Image.ANTIALIAS)
-    #   img = ImageTk.PhotoImage(image)
-    #   if(len(playlist['name']) > 30):
-    #     playlistName = playlist['name'][0:30] + '...'
-    #   else:
-    #     playlistName = playlist['name']
-    #   current_playlist = {'name' : playlistName,
-    #                   'id' : playlist['id'],
-    #                   'image' : img,
-    #                   'songCount' : playlist['tracks']['total']}
-    #   this.playlistInfo.append(current_playlist)
   def playlistNameClick(this, event):
     try:
       this.playMenu.destroy()
@@ -451,29 +415,20 @@ class create:
 
       try:
         devices = this.spotify.devices().get('devices')[0]['name']
-        # if(len(devices) == 0):
-        #    os.system("open -a /Applications/Spotify.app --hide ")
-        #    this.playlistNameClick('')
         tk.Label(this.playMenuFrame, text='Playlists', justify = 'center', bg = '#0f0f0f', fg = '#1ed761', font=("Circular", 30)).pack()
-        # playlists = this.spotify.user_playlists(user).get('items')
-
+       
         for playlist in this.playlistInfo:
           canvas = tk.Canvas(this.playMenuFrame, width = 600, bg = '#0f0f0f', height = 90, bd=0, highlightthickness=0)
           canvas.create_image((100,45), image=playlist['image'], anchor='center')
           canvas.create_text((200,45),fill='white',font=("Circular", 16), text = playlist['name'], anchor='w')
           canvas.create_text((500,45),fill='white',font=("Circular", 16), text = str(playlist['songCount']) + ' songs', anchor='w')
           canvas.bind('<Button-1>',lambda event, a=playlist['id']: this.playlistClick(a))
-          # tk.Label(canvas, text= playlist['name'], justify = 'center', bg = '#0f0f0f', fg = 'white', font=("Circular", 16)).pack()
-          # tk.Label(canvas, text= playlist['name'], justify = 'center', bg = '#0f0f0f', fg = 'white', font=("Circular", 16)).grid(row = i, column = 0, sticky = 'w')
-          # tk.Label(canvas, text= playlist['name'], justify = 'center', bg = '#0f0f0f', fg = 'white', font=("Circular", 16)).grid(row = i, column = 1, sticky = 'n')
-          # tk.Label(canvas, text= playlist['tracks']['total'], justify = 'center', bg = '#0f0f0f', fg = 'white', font=("Circular", 16)).grid(row = i, column = 2, sticky = 'e')
           canvas.pack()
         height = len(this.playlistInfo) * 90 + 50
       except:
         tk.Label(this.playMenuFrame, text= 'No devices found!', justify = 'center', bg = '#0f0f0f', fg = '#1ed761', font=("Circular", 30)).pack()
         tk.Label(this.playMenuFrame, text= 'Open spotify on a device to load playlists.', justify = 'center', bg = '#0f0f0f', fg = 'white', font=("Circular", 16)).pack()
         height = 350
-
 
       this.playMenuContainer = this.playMenuCanvas.create_window(0, 0, width = 600, height = height, anchor='nw', window=this.playMenuFrame, tags= 'frame')
       this.playMenuCanvas.update_idletasks()
@@ -496,31 +451,20 @@ class create:
 
       try:
         devices = this.spotify.devices().get('devices')[0]['name']
-        # print(devices)
-        # if(len(devices) == 0):
-        #   print(len(devices))
-           # os.system("open -a /Applications/Spotify.app --hide ")
-           # this.playlistNameClick('')
         tk.Label(this.playMenuFrame, text='Playlists', justify = 'center', bg = '#0f0f0f', fg = '#1ed761', font=("Circular", 30)).pack()
-        # playlists = this.spotify.user_playlists(user).get('items')
-
+        
         for playlist in this.playlistInfo:
           canvas = tk.Canvas(this.playMenuFrame, width = 600, bg = '#0f0f0f', height = 90, bd=0, highlightthickness=0)
           canvas.create_image((100,45), image=playlist['image'], anchor='center')
           canvas.create_text((200,45),fill='white',font=("Circular", 16), text = playlist['name'], anchor='w')
           canvas.create_text((500,45),fill='white',font=("Circular", 16), text = str(playlist['songCount']) + ' songs', anchor='w')
           canvas.bind('<Button-1>',lambda event, a=playlist['id']: this.playlistClick(a))
-          # tk.Label(canvas, text= playlist['name'], justify = 'center', bg = '#0f0f0f', fg = 'white', font=("Circular", 16)).pack()
-          # tk.Label(canvas, text= playlist['name'], justify = 'center', bg = '#0f0f0f', fg = 'white', font=("Circular", 16)).grid(row = i, column = 0, sticky = 'w')
-          # tk.Label(canvas, text= playlist['name'], justify = 'center', bg = '#0f0f0f', fg = 'white', font=("Circular", 16)).grid(row = i, column = 1, sticky = 'n')
-          # tk.Label(canvas, text= playlist['tracks']['total'], justify = 'center', bg = '#0f0f0f', fg = 'white', font=("Circular", 16)).grid(row = i, column = 2, sticky = 'e')
           canvas.pack()
         height = len(this.playlistInfo) * 90 + 50
       except:
         tk.Label(this.playMenuFrame, text= 'No devices found!', justify = 'center', bg = '#0f0f0f', fg = '#1ed761', font=("Circular", 30)).pack()
         tk.Label(this.playMenuFrame, text= 'Open spotify on a device to load playlists.', justify = 'center', bg = '#0f0f0f', fg = 'white', font=("Circular", 16)).pack()
         height = 350
-
 
       this.playMenuContainer = this.playMenuCanvas.create_window(0, 0, width = 600, height = height, anchor='nw', window=this.playMenuFrame, tags= 'frame')
       this.playMenuCanvas.update_idletasks()
@@ -532,13 +476,11 @@ class create:
       this.playMenuCanvas.bind_all("<Up>", this.arrowKeys)
   def playlistClick(this, id):
     uri = 'spotify:playlist:' + id
-    # print(this.spotify.devices().get('devices')[0]['id'])
     try:
       this.spotify.start_playback(context_uri = uri)
     except:
       try:
         device = this.spotify.devices().get('devices')[0]['id']
-        # device = '9d0970db0e1989f5f6945b97ea9454a0e7d18706'
         this.spotify.start_playback(device, context_uri = uri)
       except:
         messagebox.showwarning(title="Warning", message="No devices found!")
@@ -728,7 +670,6 @@ class create:
         this.updateRate = 15
         this.animationFrame = 0
       this.songData = song2
-      # del song2
       r = (5 * this.scale)
       this.togglePlayIcon(this.songData.getPlaybackState())
       this.canvasTimeBar.coords("timeBar", (int(20 * this.scale), int(20 * this.scale), 660*this.scale * this.songData.getTimeBar() + 20 * this.scale, int(20 * this.scale)))
@@ -741,7 +682,6 @@ class create:
       this.window.after(this.updateRate, this.update)
   def animation(this):
     global img3
-    # currentSong = functions.getCurrentSong(this.spotify)
     if(this.isPlaying == 'none'):
       this.updateRate = 1000
       img3 = tk.PhotoImage(data = this.animationLoadingJpg[this.animationFrame])
@@ -792,8 +732,6 @@ class create:
       this.canvasArtworkWrapper.itemconfig("backButton", fill=this.rgbMain, outline=this.rgbMain)
       this.canvasArtworkWrapper.itemconfig("skipButton", fill=this.rgbMain, outline=this.rgbMain)
 
-
-
     if(this.isPlaying != True):
       this.canvasTimeBar.itemconfig(this.timeCircle, fill='black', outline='black')
       this.canvasArtworkWrapper.itemconfig("backButton", fill='black', outline='black')
@@ -803,8 +741,7 @@ class create:
       this.canvasArtworkWrapper.itemconfig("buttonUnderlay", fill = 'black', outline = 'black')
       this.canvasArtworkWrapper.itemconfig("backButton", fill='black', outline='black')
       this.canvasArtworkWrapper.itemconfig("skipButton", fill='black', outline='black')
-
-
+      
     this.canvasArtwork.itemconfig("border", outline=this.rgbMain)
     this.canvasArtwork.config(bg=this.rgbMain)
 
