@@ -3,7 +3,7 @@
 Prismatic Player is a GUI (Graphical User Interface) for viewing songs that you are currently playing from Spotify. 
 According to the colors that are used in the songs's album artwork, the
 ## Example Images
-![GitHub Logo](/Photos/itunes.jpg)
+
 ## About Me
 I am a student attending California State University, Fullerton, studying Computer Science. 
 This is my first major project and I hope to further expand my knowledge with numerous coding languages.
