@@ -2,6 +2,18 @@
 ###### By: Justin Lee
 Prismatic Player is a GUI (Graphical User Interface) for viewing songs that you are currently playing from Spotify. 
 According to the colors that are used in the songs's album artwork, the colors of the backgorund, buttons, and text adapt respectively.
+## Controls
++ **Left Arrow** : Skip Song
++ **Right Arrow** : Previous Song
++ **Up Arrow** : Increase Volume
++ **Down Arrow** : Decrease Volume
++ **S Key** : Toggle Shuffle Mode
++ **R Key** : Toggle Repeat Mode
++ **? Key** : Open Control Menu
++ **Space Bar** : Toggle Play/Pause
++ **P Key** : Open Playlist Menu
++ **ESC** : Close Prismatic Player
+
 ## Example Images
 ![1](https://github.com/jlviper44/Prismatic-Player/blob/master/Example%20Images/1.jpg)
 ![2](https://github.com/jlviper44/Prismatic-Player/blob/master/Example%20Images/2.jpg)
