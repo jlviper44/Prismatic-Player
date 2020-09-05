@@ -13,7 +13,10 @@ According to the colors that are used in the songs's album artwork, the colors o
 + **Space Bar** : Toggle Play/Pause
 + **P Key** : Open Playlist Menu
 + **ESC** : Close Prismatic Player
-
+## Download Instructions
+1. Click the Green Button in the upper right hand corner called code
+2. Either use terminal/cmd and git clone or click download zip
+3. Extract the zip file and open the version that matches your operating system
 ## Example Images
 ![1](https://github.com/jlviper44/Prismatic-Player/blob/master/Example%20Images/1.jpg)
 ![2](https://github.com/jlviper44/Prismatic-Player/blob/master/Example%20Images/2.jpg)
