@@ -22,7 +22,7 @@ open Terminal or CMD and paste
 ```
 git clone https://github.com/jlviper44/Prismatic-Player
 ```
-3. Extract the zip file and open the version that matches your operating system
+3. Extract thes file and open the version that matches your operating system
 
 ## Example Images
 ![1](https://github.com/jlviper44/Prismatic-Player/blob/master/Example%20Images/1.jpg)
