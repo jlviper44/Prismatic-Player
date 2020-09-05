@@ -18,12 +18,12 @@ git clone https://github.com/jlviper44/Prismatic-Player
 2. Drag Prismatic Player into your Applications Folder
 3. Navigate to your Applications Folder and open Prismatic Player
 4. If you recieve an alert, stating that the Application cannot be verified, click cancel and follow these steps
-  1. Open System Preferences
-  2. Navigate to Security and Privacy 
-  3. Navigate to General
-  4. Click Open Anyways
-  5. Reopen Prismatic Player
-  6. Click Open Anyways
+    1. Open System Preferences
+    2. Navigate to Security and Privacy 
+    3. Navigate to General
+    4. Click Open Anyways
+    5. Reopen Prismatic Player
+    6. Click Open Anyways
 
 #### For Windows 
 1. To begin, install the lineto-circular-bold.ttf font
