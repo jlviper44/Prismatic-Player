@@ -4,6 +4,7 @@ Prismatic Player is a GUI (Graphical User Interface) for viewing songs that you 
 According to the colors that are used in the songs's album artwork, the colors of the backgorund, buttons, and text adapt respectively.
 
 ## Controls
+**NOTE: Contorls only works for premium users!**
 + **Left Arrow** : Skip Song
 + **Right Arrow** : Previous Song
 + **Up Arrow** : Increase Volume
