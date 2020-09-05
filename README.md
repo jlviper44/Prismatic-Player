@@ -16,9 +16,9 @@ According to the colors that are used in the songs's album artwork, the colors o
 + **ESC** : Close Prismatic Player
 
 ## Download Instructions
-1. Click the Green Button in the upper right hand corner called code
+1. Click the Green Button in the upper right hand corner called Code
 2. Click download zip or
-paste
+open terminal or cmd and paste
 ```
 git clone https://github.com/jlviper44/Prismatic-Player
 ```
