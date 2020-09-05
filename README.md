@@ -33,7 +33,7 @@ git clone https://github.com/jlviper44/Prismatic-Player
 ## Setup Instructions (Easy)
 1. Enter your username and click submit
 - If you are having trouble with signing in on Mac, switch your deafult web browser to Safari and try again
-- If you are having trouble with signing in on Windows, try clearing your cookies and website data.
+- If you are having trouble with signing in on either operating system, try clearing your cookies and website data.
 2. A pop-up window will appear prompting you to sign in. Sign-in and agree to the terms and conditions.
 3. After clicking agree, you will be directed to a blank website. Copy and Paste the Url into the Callback Url Entry!
 
