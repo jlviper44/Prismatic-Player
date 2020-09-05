@@ -17,7 +17,11 @@ According to the colors that are used in the songs's album artwork, the colors o
 
 ## Download Instructions
 1. Click the Green Button in the upper right hand corner called code
-2. Either use terminal/cmd and git clone or click download zip
+2. Click download zip or
+paste
+```
+git clone https://github.com/jlviper44/Prismatic-Player
+```
 3. Extract the zip file and open the version that matches your operating system
 
 ## Example Images
