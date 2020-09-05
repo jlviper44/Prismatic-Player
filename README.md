@@ -14,11 +14,13 @@ git clone https://github.com/jlviper44/Prismatic-Player
 3. Extract the files and open the version that matches your operating system
 
 ##### For Mac 
-1. To begin, drag Prismatic Player into your Applications Folder
-2. Navigate to your Applications Folder and open Prismatic Player 
+1. To begin, install the lineto-circular-bold.ttf font
+2. Drag Prismatic Player into your Applications Folder
+3. Navigate to your Applications Folder and open Prismatic Player 
 
 #### For Windows 
-1. To begin, go into the Prismatic Player folder and open Prismatic Player.exe
+1. To begin, install the lineto-circular-bold.ttf font
+2. Navigate to the Prismatic Player folder and open Prismatic Player.exe
 
 
 ## Setup Instructions (Easy)
