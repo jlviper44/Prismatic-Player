@@ -10,6 +10,7 @@ open Terminal or CMD and paste
 ```
 git clone https://github.com/jlviper44/Prismatic-Player
 ```
+
 3. Extract the files and open the version that matches your operating system
 
 ## Setup Instructions (Easy)
