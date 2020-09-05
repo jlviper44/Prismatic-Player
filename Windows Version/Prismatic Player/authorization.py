@@ -286,9 +286,9 @@ class auth:
 
     this.callback_urlInstructions = tk.Label(this.callback_urlCanvas, text='After logging into your spotify account and clicking agree,', bg = '#0f0f0f', fg = 'white', font=("Circular Bold", 13)).grid(row = 0, columnspan = 2)
     tk.Label(this.callback_urlCanvas, text='you will be directed to a blank website.', bg = '#0f0f0f', fg = 'white', font=("Circular Bold", 13)).grid(row = 1, columnspan = 2)
-    tk.Label(this.callback_urlCanvas, text='Please Copy and Paste the Url into the                                       ', bg = '#0f0f0f', fg = 'white', font=("Circular Bold", 13)).grid(row = 2, columnspan = 2)
+    tk.Label(this.callback_urlCanvas, text='Please Copy and Paste the Url into the                                      ', bg = '#0f0f0f', fg = 'white', font=("Circular Bold", 13)).grid(row = 2, columnspan = 2)
     this.callback_urlHighlight = tk.Label(this.callback_urlCanvas, text='Callback Url Entry!', bg = '#0f0f0f', fg = '#34a1eb', font=("Circular Bold", 13, "underline"))
-    this.callback_urlHighlight.grid(row = 2, columnspan = 2, sticky ='e', padx=(0,14))
+    this.callback_urlHighlight.grid(row = 2, columnspan = 2, sticky ='e', padx=(0,0))
     this.callback_urlHighlight.bind('<Button-1>', this.openCallbackHelp)
     this.callback_urlText   = tk.Label(this.callback_urlCanvas, text="Callback URL:", bg = '#0f0f0f', fg = '#1ed761', font=("Circular Bold", 13)).grid(row=6, column=0, pady=(15,0), sticky='e')
     this.callback_urlEntry  = tk.Entry(this.callback_urlCanvas, insertbackground = '#1ed761',width = 30, bg = '#424241', fg = 'white', font=("Circular Bold", 13), highlightcolor = '#1ed761', relief='flat', textvariable = this.callback_url).grid(row=6, column=1,pady=(15,0), sticky='w')
