@@ -14,8 +14,9 @@ git clone https://github.com/jlviper44/Prismatic-Player
 3. Extract the files and open the version that matches your operating system
 
 ##### For Mac 
-1. To begin, drag Prismatic Player to the folder named 'Drag Prismatic Player Here'
-2. Navigate to your Applications Folder and open Prismatic Player 
+1. Open Prismatic Player.dmg
+2. Drag Prismatic Player into the folder named 'Drag Prismatic Player Here'
+3. Navigate to your Applications Folder and open Prismatic Player 
 
 #### For Windows 
 1. To begin, go into the Prismatic Player folder and open Prismatic Player.exe
