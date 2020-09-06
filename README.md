@@ -1,8 +1,9 @@
 # Prismatic-Player
 ###### By: Justin Lee
 Prismatic Player is a GUI (Graphical User Interface) for viewing songs that you are currently playing from Spotify. 
-According to the colors that are used in the songs's album artwork, the colors of the backgorund, buttons, and text adapt respectively.
+According to the colors that are used in the song's album artwork, the colors of the background, buttons, and text adapt respectively.
 
+Supports both horizontal and vertical monitor layouts.
 ## Download Instructions
 1. Click the Green Button in the upper right hand corner called Code
 2. Click download zip or
@@ -17,7 +18,7 @@ git clone https://github.com/jlviper44/Prismatic-Player
 1. To begin, install the lineto-circular-bold.ttf font
 2. Drag Prismatic Player into your Applications Folder
 3. Navigate to your Applications Folder and open Prismatic Player
-4. If you recieve an alert, stating that the Application cannot be verified, click cancel and follow these steps
+4. If you receive an alert, stating that the Application cannot be verified, click cancel and follow these steps
     1. Open System Preferences
     2. Navigate to Security and Privacy 
     3. Navigate to General
@@ -32,7 +33,7 @@ git clone https://github.com/jlviper44/Prismatic-Player
 
 ## Setup Instructions (Easy)
 1. Enter your username and click submit
-- If you are having trouble with signing in on Mac, switch your deafult web browser to Safari and try again
+- If you are having trouble with signing in on Mac, switch your default web browser to Safari and try again
 - If you are having trouble with signing in on either operating system, try clearing your cookies and website data.
 2. A pop-up window will appear prompting you to sign in. Sign-in and agree to the terms and conditions.
 3. After clicking agree, you will be directed to a blank website. Copy and Paste the Url into the Callback Url Entry!
@@ -43,7 +44,7 @@ git clone https://github.com/jlviper44/Prismatic-Player
 3. Follow the directions listed! 
 
 ## Controls
-**NOTE: Contorls only works for premium users!**
+**NOTE: Controls only works for premium users!**
 + **Left Arrow** : Skip Song
 + **Right Arrow** : Previous Song
 + **Up Arrow** : Increase Volume
